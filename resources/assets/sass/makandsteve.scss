@@ -127,6 +127,7 @@ header {
 	color: #fff;
 	@include at2x('../img/header', jpg);
 	background-size: 100% 100% !important;
+	background-repeat: no-repeat;
 	height: 550px;
 	
 	h1 {
@@ -302,6 +303,7 @@ header {
 	color: #fff;
 	@include at2x('../img/registry-bg', jpg);
 	background-size: 100% 100% !important;
+	background-repeat: no-repeat;
 	height: 400px;
 	padding-top: 50px;
 	

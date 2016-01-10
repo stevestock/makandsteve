@@ -1,11 +1,7 @@
 "use strict";
 
 // Outdated Browser Popup
-outdatedBrowser({
-    bgColor: "#222",
-    color: "#fff",
-    lowerThan: "IE10"
-});
+outdatedBrowser()
 
 // Smooth Scrolling with the navbar
 var $root = $('html, body');
