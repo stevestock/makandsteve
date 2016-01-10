@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-image-resize": "^0.7.1",
+    "gulp-imagemin": "^2.4.0",
+    "laravel-elixir": "^4.2.0"
+  }
+}

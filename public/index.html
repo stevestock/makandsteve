@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Makenzie &amp; Steven</title>
+        <meta name="description" content="Wedding website for Makenzie &amp; Steven">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Place favicon.ico in the root directory -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic|Montserrat:400,700">
+		<link rel="stylesheet" href="css/vendor.css">
+		<link rel="stylesheet" href="css/main.css">
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+			
+		<script type=text/template id=countdown-template>
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1 col-xs-12">
+					<div class="col-xs-5ths col-sm-2">
+						<div class="number"><%= months %></div>
+						<div class="number-label">months</div>
+					</div>
+					<div class="col-xs-5ths col-sm-2">
+						<div class="number"><%= days %></div>
+						<div class="number-label">days</div>
+					</div>
+					<div class="col-xs-5ths col-sm-2">
+						<div class="number"><%= hours %></div>
+						<div class="number-label">hours</div>
+					</div>
+					<div class="col-xs-5ths col-sm-2">
+						<div class="number"><%= minutes %></div>
+						<div class="number-label">min</div>
+					</div>
+					<div class="col-xs-5ths col-sm-2">
+						<div class="number"><%= seconds %></div>
+						<div class="number-label">sec</div>
+					</div>
+				</div>
+			</div>
+		</script>
+	</head>
+	
+	<body data-spy=scroll data-target=#navbar data-offset=70>
+		<div id=outdated>
+			<h6>Your browser is out-of-date!</h6>
+			
+			<p>Update your browser to view this website correctly.</p>
+			<p><a id=btnUpdate class="btn btn-default" href="http://outdatedbrowser.com/">Update my browser now</a></p>
+			
+			<p id=btnClose><a href="index.html#">Close</a></p>
+		</div>
+		
+		<nav id=navbar class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">Menu</button>
+		      <a class="navbar-brand visible-xs" href="#">Makenzie &amp; Steven</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+				<li><a href="#date">Date</a></li>
+				<li><a href="#location">Location</a></li>
+				<li><a href="#hotel">Hotel</a></li>
+				<li><a href="#registry">Registry</a></li>
+				<li><a href="#photos">Photos</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		
+		<header>
+			<a id=date class=anchor></a>
+			<div class=container>
+				<div class="row">
+					<div class="col-xs-12">
+						<h1>Makenzie <em class=amp>&amp;</em> Steven</h1>
+						<h4>Invite you <em>to</em> share <em>in the</em> celebration <em>of their</em> marriage</h4>
+						<img src="img/date.jpg" alt="Friday, September 2, 2016 five o'clock in the Afternoon"/>
+						<div id=countdown class=countdown></div>
+						<h3 id="until">Until <em>we say</em> I Do</h3>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<section class=location>
+			<a id=location class=anchor></a>
+			<div class=container>
+				<div class="row">
+					<div class="col-xs-12">
+						<h2>Woodcrest Country Club</h2>
+						<h4>300 East Evesham Rd <em>in</em> Cherry Hill, New Jersey</h4>
+						<a class="btn btn-default" href="https://goo.gl/maps/PX1mEXKdkHy" target=_blank>Get Directions</a>
+					</div>
+				</div>
+			</div>
+			<div id=map></div>
+		</section>
+			
+		<section class=hotel>
+			<a id=hotel class=anchor></a>
+			<div class=container>
+				<div class="row">
+					<div class="col-xs-12">
+						<h2>Hotel</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-4 no-padding">
+						<div class="bordered">
+							<hr class="top-line">
+							<h3>Springhill Suites</h3>
+							<h4>Marriott</h4>
+							<p>1031 Voohees Drive</p>
+							<p>Voorhees, NJ 08043</p>
+							<hr class="bottom-line">
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 no-padding">
+						<div class="bordered">
+							<hr class="top-line">
+							<h3>Book</h3>
+							<h4>Online</h4>
+							<p>Coming Soon</p>
+							<br>
+							<hr class="bottom-line">
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 no-padding">
+						<div class="bordered">
+							<hr class="top-line">
+							<h3>Book</h3>
+							<h4>By Phone</h4>
+							<p>Coming Soon</p>
+							<br>
+							<hr class="bottom-line">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+			
+		<section class=registry>
+			<a id=registry class=anchor></a>
+				<div class=container>
+					<div class="row">
+						<div class="col-xs-12">
+							<h2>Registry</h2>
+							<h4>Coming Soon</h4>
+						</div>
+					</div>
+				</div>
+				<!-- <h4>We <em>are</em> Registered <em>at the</em> Following</h4> -->
+			</div>
+			<!-- <div class=container>
+				<div class=row>
+					<div class="col-lg-6 col-sm-6 col-xs-12 text-center">
+						<img src="img/logo-bbb.png" class=img-responsive alt="">
+						<a class="btn btn-default" href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=541233297&pwsurl=" target=_blank>View Registry</a>
+					</div>
+					<div class="col-lg-6 col-sm-6 col-xs-12 text-center">
+						<img src="img/logo-cb.png" class=img-responsive alt="">
+						<a class="btn btn-default" href=http://www.crateandbarrel.com/Gift-Registry/Caleigh-Williams-and-Timothy-Giarra/r5190664 target=_blank>View Registry</a>
+					</div>
+				</div>
+			</div> -->
+		</section>
+			
+		<section class=photos>
+			<a id=photos class=anchor></a>
+			<div class=container>
+				<div class="row">
+					<div class="col-xs-12">
+						<h2>Photos</h2>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row photo-grid">
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/1.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/1.jpg" class=img-responsive alt="">
+							</a>
+						</figure>
+					</div>
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/2.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/2.jpg" class=img-responsive alt=""></a>
+						</figure>
+					</div>
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/3.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/3.jpg" class=img-responsive alt="">
+							</a>
+						</figure>
+					</div>
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/4.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/4.jpg" class=img-responsive alt="">
+							</a>
+						</figure>
+					</div>
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/5.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/5.jpg" class=img-responsive alt="">
+							</a>
+						</figure>
+					</div>
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/6.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/6.jpg" class=img-responsive alt="">
+							</a>
+						</figure>
+					</div>
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/7.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/7.jpg" class=img-responsive alt="">
+							</a>
+						</figure>
+					</div>
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/8.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/8.jpg" class=img-responsive alt="">
+							</a>
+						</figure>
+					</div>
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/9.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/9.jpg" class=img-responsive alt="">
+							</a>
+						</figure>
+					</div>
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/10.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/10.jpg" class=img-responsive alt="">
+							</a>
+						</figure>
+					</div>
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/11.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/11.jpg" class=img-responsive alt="">
+							</a>
+						</figure>
+					</div>
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/12.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/12.jpg" class=img-responsive alt="">
+							</a>
+						</figure>
+					</div>
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/13.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/13.jpg" class=img-responsive alt="">
+							</a>
+						</figure>
+					</div>
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/14.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/14.jpg" class=img-responsive alt="">
+							</a>
+						</figure>
+					</div>
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/15.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/15.jpg" class=img-responsive alt="">
+							</a>
+						</figure>
+					</div>
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/16.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/16.jpg" class=img-responsive alt="">
+							</a>
+						</figure>
+					</div>
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/17.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/17.jpg" class=img-responsive alt="">
+							</a>
+						</figure>
+					</div>
+					<div class="col-sm-2 col-xs-4">
+						<figure class=photo-item>
+							<a class=lightbox href="img/photos/18.jpg" data-lightbox-gallery=gallery1>
+								<img src="img/photos/thumbs/18.jpg" class=img-responsive alt="">
+							</a>
+						</figure>
+					</div>
+				</div> <!-- photo-grid --> 
+			</div> <!-- container -->
+		</section>
+		
+		<section class="farewell">
+			<div class=container-fluid>
+				<div class="row">
+					<div class="col-xs-12">
+						<img id=farewell-bg class="img-responsive" src="img/footer.png">
+						<h2>We can't wait to see you there!</h2>
+						<img id="monogram" src="img/monogram.jpg" alt="Makenzie &amp; Steven Monogram"/>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<footer>
+			<div class=container>
+				<div class="row">
+					<div class="col-xs-12">
+						<p>Made <em>with</em> <span class="glyphicon glyphicon-heart"></span> <em>by</em> Mak &amp; Steve</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+		<!-- Google Analytics -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-69845842-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script>$.fn.modal || document.write('<script src="js/bootstrap.min.js"><\/script>')</script>
+		<script src="js/vendor.js"></script>
+		<script src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
