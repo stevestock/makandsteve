@@ -1,6 +1,6 @@
 "use strict";
 
-// outdated Browser Popup
+// Outdated Browser Popup
 outdatedBrowser({
     bgColor: "#222",
     color: "#fff",
@@ -15,6 +15,7 @@ $('.navbar li a').click(function() {
         scrollTop: $(href).offset().top
     }, 500, function () {
         window.location.hash = href;
+		$("#bs-example-navbar-collapse-1").collapse('hide')
     });
     return false;
 });

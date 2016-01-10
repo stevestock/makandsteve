@@ -192,8 +192,10 @@ header {
 		.countdown {
 			position: absolute;
 			top: 300px;
-			left: 0px;
-			right: 0px;
+			// must be set the same as the column margins
+			// or you get a white-line overflow on the right
+			left: 15px;
+			right: 15px;
 	
 			@media (min-width: $screen-sm) {
 				top: 400px;
