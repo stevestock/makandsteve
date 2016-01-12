@@ -42,15 +42,8 @@ body {
 }
 
 .btn {
-	//font-weight: 400;
 	text-transform: uppercase;
 	border-width: 3px;
-	//border-radius: 0;
-}
-
-.btn-default {
-    //background-color: transparent;
-	//border-color: #222;
 }
 
 .btn-default:hover {
@@ -226,7 +219,7 @@ header {
 }
 
 #map {
-    height: 200px;
+    height: 300px;
 	
 	@media (min-width: $screen-sm) {
 		height: 400px;
@@ -292,10 +285,6 @@ header {
 	.bordered {
 		border-top: 2px solid #222;
 		border-bottom: 2px solid #222;
-		//margin-left: 5px;
-		//margin-right: 5px;
-		//margin: 0px;
-		//padding: 0px;
 	}
 }
 
