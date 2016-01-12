@@ -36,6 +36,7 @@ elixir(function(mix) {
 		   "./bower_components/retina.js/dist/retina.min.js"
        ], 'public/js/vendor.js')
 	   .scripts(['main.js'], 'public/js/main.js')
+	   .copy('./bower_components/html5shiv/dist/html5shiv.min.js', 'public/js/html5shiv.min.js')
 	   .copy('./bower_components/jquery/dist/jquery.min.js', 'public/js/jquery.min.js')
 	   .copy('./bower_components/jquery/dist/jquery.min.map', 'public/js/jquery.min.map')
 	   .copy('./bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js', 'public/js/bootstrap.min.js')
