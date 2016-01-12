@@ -21,8 +21,9 @@ elixir(function(mix) {
 		"./bower_components/nivo-lightbox/nivo-lightbox.css",
 		"./bower_components/nivo-lightbox/themes/default/default.css",
 		"./bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.css",
-		"./bower_components/leaflet/dist/leaflet.css"
-       ], 'public/css/vendor.css')
+		"./bower_components/leaflet/dist/leaflet.css",
+		"./public/css/main.css"
+       ], 'public/css/main.css')
 	   
 	   .copy('./bower_components/bootstrap-sass/assets/fonts/bootstrap', 'public/fonts/bootstrap')
 	   .copy('./resources/assets/fonts/Wisdom Script AJ.ttf', 'public/fonts')
