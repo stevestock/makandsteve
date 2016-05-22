@@ -2,7 +2,7 @@
 Makenzie and Steven's Wedding Website http://www.makandsteve.com
 
 ### Team
-* Steven Stockhamer (stevsetock) -- Developer -- @TheStevestock
+* Steven Stockhamer (stevestock) -- Developer -- @TheStevestock
 * Makenzie Barski   -- Designer  -- @marskibarski
 
 ### Special Thanks
