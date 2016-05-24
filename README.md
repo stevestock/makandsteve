@@ -37,6 +37,18 @@ $ npm install
 $ bower install
 ```
 
+### Push to Website
+
+You may need to delete the gh-pages branch if rebased
+
+```sh
+$ git push origin :gh-pages
+```
+
+```sh
+$ git subtree push --prefix public origin gh-pages
+```
+
 ### Todos
  - Finish Registry
  - update dependencies
