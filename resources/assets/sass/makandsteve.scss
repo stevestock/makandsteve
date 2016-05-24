@@ -26,7 +26,7 @@ h5,
 h6 {
     text-transform: uppercase;
 	font-weight: 700;
-	
+
 	em {
       font-family: Georgia,'Times New Roman',Times,serif;
 	  font-weight: 400;
@@ -77,7 +77,7 @@ body {
     font-weight: 400;
     text-transform: uppercase;
     border-width: 3px;
-  
+
     &:hover,
     &:focus {
       color: #fff;
@@ -89,21 +89,21 @@ body {
   }
 
   .navbar-nav {
-	
+
     @media (min-width: $screen-sm) {
       float: none;
       text-align: center;
-	  
+
 	  li {
         display: inline-block;
         float: none;
       }
-	  
+
       > li > a {
         margin: 25px 15px 14px;
         padding: 0 0 11px;
   	  }
-	  
+
       > .active > a {
         &,
         &:hover,
@@ -122,45 +122,45 @@ header {
 	background-size: 100% 100% !important;
 	background-repeat: no-repeat;
 	height: 550px;
-	
+
 	h1 {
 		font-size: 2.5em;
 	}
-	
+
 	h4 {
 		font-size: 14px;
 	}
-	
+
 	@media (min-width: $screen-sm) {
 		height: 700px;
-		
+
 		h1 {
 			font-size: 4em;
 		}
-		
+
 		h4 {
 			font-size: 18px;
 		}
 	}
-	
+
 	.container {
 		padding-top: 65px;
-		
+
 		@media (min-width: $screen-sm) {
 			padding-top: 70px;
 		}
-		
+
 		h1 {
 			margin-top: 10px;
 			padding-bottom: 0px;
 			margin-bottom: 0px;
 		}
-		
+
 		h4 {
 			padding-top: 0px;
 			margin-top: 0px;
 		}
-		
+
 		img {
 			position: absolute;
 			top: 150px;
@@ -168,21 +168,21 @@ header {
 			right: 0px;
 			display:block;
 			margin:auto;
-			height: auto; 
-			width: 80%; 
-			max-width: 484px; 
+			height: auto;
+			width: 80%;
+			max-width: 484px;
 			max-height: 80px;
 			vertical-align:middle;
-			
+
 			@media (min-width: 600px) {
 				top: 130px;
 			}
-			
+
 			@media (min-width: $screen-sm) {
 				top: 190px;
 			}
 		}
-		
+
 		.countdown {
 			position: absolute;
 			top: 300px;
@@ -190,46 +190,46 @@ header {
 			// or you get a white-line overflow on the right
 			left: 15px;
 			right: 15px;
-	
+
 			@media (min-width: $screen-sm) {
 				top: 400px;
 			}
-	
+
 			.number {
 			    font-size: 30px;
-				
+
 				@media (min-width: $screen-sm) {
 					font-size: 50px;
 				}
 			}
 		}
-		
+
 		#until {
 			position: absolute;
 			top: 350px;
 			left: 0px;
 			right: 0px;
-			
+
 			@media (min-width: $screen-sm) {
 				font-size: 30px;
 				top: 480px;
 			}
 		}
-	}	
+	}
 }
 
 #map {
     height: 300px;
-	
+
 	@media (min-width: $screen-sm) {
 		height: 400px;
 	}
-	
+
     border-top: 3px solid #222;
 	border-bottom: 3px solid #222;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	
+
 	.leaflet-popup-content-wrapper {
 	    border-radius: 0;
 	}
@@ -247,7 +247,7 @@ header {
 		height: 2px;
 		background: #222;
 	}
-	
+
 	.bottom-line {
 		padding: 0px;
 		margin-top: 10px;
@@ -257,12 +257,12 @@ header {
 		height: 2px;
 		background: #222;
 	}
-	
+
 	.no-padding {
 		padding-left: 11px;
 		padding-right: 11px;
 	}
-	
+
 	h3 {
 		font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-size: 2em;
@@ -289,30 +289,92 @@ header {
 }
 
 .registry {
-	color: #fff;
-	@include at2x('../img/registry-bg', jpg);
-	background-size: 100% 100% !important;
-	background-repeat: no-repeat;
-	height: 400px;
-	padding-top: 50px;
-	
-	h2 {
-		font-size: 3em;
-	}
-	
-	@media (min-width: $screen-sm) {
-		height: 700px;
-		padding-top: 100px;
-		
-		h2 {
-			font-size: 4em;
-		}
-	}
-	@media (min-width: $screen-lg-min) {
-		height: 900px;
-		padding-top: 150px;
-	}
+    width: 100%;
+    text-align:center;
+    height: 450px;
+
+    @media (min-width: 600px) {
+      height: 500px;
+    }
+
+    @media (min-width: 650px) {
+      height: 550px;
+    }
+
+    @media (min-width: 700px) {
+      height: 600px;
+    }
 }
+
+.inner-reg {
+  @include at2x('../img/registryleaves', png);
+	background-size: 100% auto !important;
+	background-repeat: no-repeat;
+
+  max-width:750px;
+  width:100%;
+  height: 100%;
+  display: inline-block;
+  text-align:center;
+}
+
+.inner-inner-reg {
+  height: 57%;
+  width: 57%;
+  display: block;
+  position: relative;
+	top: 45%;
+	transform: translateY(-50%);
+  padding: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.reg-wrapper {
+  position: relative;
+}
+
+.img-registry0 {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 20%;
+}
+
+.img-registry1 {
+  position: relative;
+  display: inline-block;
+  width: 60%;
+  top: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.img-registry2 {
+  position: absolute;
+  display: inline-block;
+  width: 60%;
+  top: 45%;
+	transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.img-registry3 {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 
 .photo-grid {
     > [class^="col-"]{
@@ -335,11 +397,11 @@ header {
 	margin-top:-30px;
 	padding-top:-30px;
     height: 400px;
-	
+
 	@media (min-width: $screen-sm) {
 		height: 550px;
 	}
-	
+
 	#farewell-bg {
 		position: absolute;
 		top: 0px;
@@ -349,12 +411,12 @@ header {
 		height: 200px;
 		padding: 0px;
 		margin: 0px;
-		
+
 		@media (min-width: $screen-sm) {
 			height: 300px;
 		}
 	}
-	
+
 	#monogram {
 	padding: 0px;
 	margin: 0px;
@@ -372,7 +434,7 @@ header {
 			top: 300px;
 		}
 	}
-	
+
 	h2 {
 		color: white;
 		left: 0;
@@ -384,7 +446,7 @@ header {
 		font-weight: normal;
 		font-size: 3em;
 		opacity: 0.8;
-		
+
 		@media (min-width: $screen-sm) {
 			top: 80px;
 		}
@@ -394,7 +456,7 @@ header {
 footer {
 	color: #777;
 	text-transform: uppercase;
-	
+
 	em {
       font-family: Georgia,'Times New Roman',Times,serif;
 	  text-transform: none;
