@@ -30,7 +30,7 @@ elixir(function(mix) {
   .scripts([
     'nivo-lightbox/nivo-lightbox.min.js',
     'countdownjs/countdown.min.js',
-    'lodash/lodash.min.js',
+    'lodash/dist/lodash.min.js',
     'leaflet/dist/leaflet.js',
     'outdated-browser/outdatedbrowser/outdatedbrowser.min.js',
     'retina.js/dist/retina.min.js'
