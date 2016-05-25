@@ -56,38 +56,24 @@ gulp.task('img', function() {
     'resources/assets/images/*.{jpg,JPG,png}',
     '!resources/assets/images/{heart,footer,BedBath,crateandbarrel,registryleaves,furniture,registrytext}*.png'])
     .pipe(imageResize({format : 'jpg'}))
-    .pipe(imagemin({optimizationLevel: 3, progressive: true, interlaced: true}))
+    .pipe(imagemin([imagemin.jpegtran({progressive: true})]))
     .pipe(gulp.dest('./public/img/'))
 
     gulp.src([
       'resources/assets/images/{heart,footer,BedBath,crateandbarrel,registryleaves,furniture,registrytext}*.png'])
-      .pipe(imagemin({optimizationLevel: 3, progressive: true, interlaced: true}))
+      .pipe(imagemin([imagemin.jpegtran({progressive: true})]))
       .pipe(gulp.dest('./public/img/'))
 
-      gulp.src([
-        'resources/assets/images/photos/*.{jpg,JPG,png}',
-        '!resources/assets/images/photos/5.{jpg,JPG,png}']
+      gulp.src(['resources/assets/images/photos/*.{jpg,JPG,png}']
       )
       .pipe(imageResize({format : 'jpg'}))
-      .pipe(imagemin({optimizationLevel: 3, progressive: true, interlaced: true}))
+      .pipe(imagemin([imagemin.jpegtran({progressive: true})]))
       .pipe(gulp.dest('public/img/photos/'))
       .pipe(imageResize({
-        width : 600,
-        height : 600,
+        width : 500,
+        height : 500,
         crop : true,
-        upscale : false
-      }))
-      .pipe(gulp.dest('public/img/photos/thumbs/'))
-
-      gulp.src('resources/assets/images/photos/5.{jpg,JPG,png}')
-      .pipe(imageResize({format : 'jpg'}))
-      .pipe(imagemin({optimizationLevel: 3, progressive: true, interlaced: true}))
-      .pipe(gulp.dest('public/img/photos/'))
-      .pipe(imageResize({
-        width : 300,
-        height : 300,
-        crop : true,
-        upscale : false
+        upscale : true
       }))
       .pipe(gulp.dest('public/img/photos/thumbs/'));
     });
