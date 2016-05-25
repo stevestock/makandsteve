@@ -308,6 +308,7 @@ header {
 .registry {
     text-align:center;
     @include aspect-ratio(400, 315);
+    max-height: 590px;
 }
 
 .inner-reg {
