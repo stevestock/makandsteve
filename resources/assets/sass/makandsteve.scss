@@ -291,7 +291,39 @@ header {
 .registry {
     width: 100%;
     text-align:center;
-    height: 450px;
+    height: 260px;
+
+    @media (min-width: 375px) {
+      height: 290px;
+    }
+
+    @media (min-width: 400px) {
+      height: 315px;
+    }
+
+    @media (min-width: 425px) {
+      height: 335px;
+    }
+
+    @media (min-width: 450px) {
+      height: 360px;
+    }
+
+    @media (min-width: 475px) {
+      height: 385px;
+    }
+
+    @media (min-width: 500px) {
+      height: 400px;
+    }
+
+    @media (min-width: 525px) {
+      height: 425px;
+    }
+
+    @media (min-width: 550px) {
+      height: 450px;
+    }
 
     @media (min-width: 600px) {
       height: 500px;
@@ -304,6 +336,8 @@ header {
     @media (min-width: 700px) {
       height: 600px;
     }
+
+    background-color: #f00;
 }
 
 .inner-reg {
@@ -316,6 +350,7 @@ header {
   height: 100%;
   display: inline-block;
   text-align:center;
+  background-color: #0f0;
 }
 
 .inner-inner-reg {
@@ -329,6 +364,7 @@ header {
   margin: auto;
   left: 0;
   right: 0;
+  background-color: #00f;
 }
 
 .reg-wrapper {
