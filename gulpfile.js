@@ -1,79 +1,59 @@
-var elixir = require('laravel-elixir');
+//http://quenchjs.com
+
 var gulp = require('gulp');
 var del = require('del');
 var imageResize = require('gulp-image-resize');
 var imagemin = require('gulp-imagemin');
-
-/*
-|--------------------------------------------------------------------------
-| Elixir Asset Management
-|--------------------------------------------------------------------------
-|
-| Elixir provides a clean, fluent API for defining some basic Gulp tasks
-| for your Laravel application. By default, we are compiling the Sass
-| file for our application, as well as publishing vendor resources.
-|
-*/
-
-elixir(function(mix) {
-  mix.sass(['makandsteve.scss'], 'public/css/main.css')
-  .styles([
-    './bower_components/nivo-lightbox/nivo-lightbox.css',
-    './bower_components/nivo-lightbox/themes/default/default.css',
-    './bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.css',
-    './bower_components/leaflet/dist/leaflet.css',
-    './public/css/main.css'
-  ], 'public/css/main.css')
-  .copy('bower_components/bootstrap-sass/assets/fonts/bootstrap', 'public/fonts/bootstrap')
-  .copy('resources/assets/fonts/Wisdom Script AJ.ttf', 'public/fonts')
-  .copy('bower_components/nivo-lightbox/themes/default/*.{png,gif}', 'public/css')
-  .scripts([
-    'nivo-lightbox/nivo-lightbox.min.js',
-    'countdownjs/countdown.min.js',
-    'lodash/dist/lodash.min.js',
-    'leaflet/dist/leaflet.js',
-    'outdated-browser/outdatedbrowser/outdatedbrowser.min.js',
-    'retina.js/dist/retina.min.js'
-  ], 'public/js/vendor.js', 'bower_components')
-  .scripts(['main.js'], 'public/js/main.js')
-  .copy('bower_components/html5shiv/dist/html5shiv.min.js', 'public/js')
-  .copy('bower_components/jquery/dist/jquery.min.js', 'public/js')
-  .copy('bower_components/jquery/dist/jquery.min.map', 'public/js')
-  .copy('bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js', 'public/js')
-});
+var rename = require('gulp-rename');
+var path = require('path');
 
 gulp.task('clean', function() {
   del([
     'public/fonts',
     'public/js',
     'public/css',
-    'public/img'
+    'public/img',
+    'resources/assets/img'
   ]);
 });
 
-gulp.task('img', function() {
+var imgInputPath = path.join('resources', 'assets', 'images')
+var imgOptimizePath = path.join('resources', 'assets', 'img')
+var imgPublicPath = path.join('public', 'img');
+
+gulp.task('copy-images', function() {
+  gulp.src([imgOptimizePath + '/**/*'])
+  .pipe(gulp.dest(imgPublicPath, {overwrite: false}));
+})
+
+// requires brew install imagemagick graphicsmagick
+gulp.task('optimize-images', function() {
   gulp.src([
     'resources/assets/images/*.{jpg,JPG,png}',
-    '!resources/assets/images/{heart,footer,BedBath,crateandbarrel,registryleaves,furniture,registrytext}*.png'])
-    .pipe(imageResize({format : 'jpg'}))
+    '!resources/assets/images/{heart,footer,BedBath,crateandbarrel,registryleaves,furniture,registrytext}*.png']
+  )
+  .pipe(imageResize({format : 'jpg'}))
+  .pipe(imagemin([imagemin.jpegtran({progressive: true})]))
+  .pipe(gulp.dest(imgOptimizePath))
+
+  gulp.src([
+    'resources/assets/images/{heart,footer,BedBath,crateandbarrel,registryleaves,furniture,registrytext}*.png'])
     .pipe(imagemin([imagemin.jpegtran({progressive: true})]))
-    .pipe(gulp.dest('./public/img/'))
+    .pipe(gulp.dest(imgOptimizePath))
 
-    gulp.src([
-      'resources/assets/images/{heart,footer,BedBath,crateandbarrel,registryleaves,furniture,registrytext}*.png'])
-      .pipe(imagemin([imagemin.jpegtran({progressive: true})]))
-      .pipe(gulp.dest('./public/img/'))
-
-      gulp.src(['resources/assets/images/photos/*.{jpg,JPG,png}']
-      )
-      .pipe(imageResize({format : 'jpg'}))
-      .pipe(imagemin([imagemin.jpegtran({progressive: true})]))
-      .pipe(gulp.dest('public/img/photos/'))
-      .pipe(imageResize({
-        width : 500,
-        height : 500,
-        crop : true,
-        upscale : true
-      }))
-      .pipe(gulp.dest('public/img/photos/thumbs/'));
-    });
+    gulp.src(['resources/assets/images/photos/*.{jpg,JPG,png}']
+  )
+  .pipe(imageResize({format : 'jpg'}))
+  .pipe(imagemin([imagemin.jpegtran({progressive: true})]))
+  .pipe(gulp.dest(path.join(imgOptimizePath,'photos')))
+  .pipe(imageResize({
+    width : 500,
+    height : 500,
+    crop : true,
+    upscale : true
+  }))
+  .pipe(rename(function (path) {
+    path.basename = "thumb" + path.basename;
+  }))
+  .pipe(gulp.dest(path.join(imgOptimizePath, 'photos', 'thumbs')))
+});

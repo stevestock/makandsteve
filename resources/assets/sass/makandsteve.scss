@@ -1,6 +1,6 @@
-@import "resources/assets/sass/_variables.scss";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "bower_components/retina.js/src/_retina.scss";
+@import "resources/assets/sass/variables.scss";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/retinajs/src/_retina.scss";
 
 @mixin aspect-ratio($width, $height) {
   position: relative;
@@ -22,7 +22,7 @@
 // Import the fonts
 @font-face {
   font-family: wisdomScript;
-  src: url('../fonts/Wisdom Script AJ.ttf') format('truetype');
+  src: url('../fonts/WisdomScriptAJ.ttf') format('truetype');
 }
 
 html {
@@ -135,7 +135,7 @@ body {
 
 header {
 	color: #fff;
-	@include at2x('../img/header', jpg);
+	@include retina('../img/header.jpg');
 	background-size: 100% 100% !important;
 	background-repeat: no-repeat;
 	height: 550px;
@@ -312,7 +312,7 @@ header {
 }
 
 .inner-reg {
-  @include at2x('../img/registryleaves', png);
+  @include retina('../img/registryleaves.png');
 	background-size: 100% auto !important;
 	background-repeat: no-repeat;
 
