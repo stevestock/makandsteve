@@ -13,14 +13,14 @@ Makenzie and Steven's Wedding Website http://www.makandsteve.com
 * [Twitter Bootstrap](http://getbootstrap.com) - modern front-end UI framework
 * [jQuery](https://jquery.com) - javascript framework
 * [Countdown.js](http://countdownjs.org) - accurate, intuitive jQuery countdown plugin
-* [Nivo Lightbox](https://github.com/gilbitron/Nivo-Lightbox) - simple jQuery lightbox plugin
 * [Leaflet](http://leafletjs.com) - mobile-friendly interactive maps
 * [Outdated Browser](http://outdatedbrowser.com/)
 * [lodash](https://lodash.com) - modern JavaScript utility library
 * [retina.js](http://imulus.github.io/retinajs/)
 * [Gulp](http://gulpjs.com) - the streaming build system
-* [Bower](http://bower.io) - front-end package manager
-* [Dillinger](http://dillinger.io) - in-browser markdown editor
+* [yarn](https://yarnpkg.com/en/) - JavaScript package manager
+* [Atom](https://atom.io) - editor
+* [webpack](https://webpack.js.org) - asset bundler
 
 ### Installation
 
