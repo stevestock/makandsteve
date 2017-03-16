@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -21,25 +21,25 @@ module.exports = {
         })
       },
       {
-        test: require.resolve("outdated-browser"),
+        test: require.resolve('outdated-browser'),
         use: 'exports-loader?outdatedBrowser'
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg)$/,
-        use: "file-loader?name=[name].[ext]&publicPath=../fonts/&outputPath=fonts/"
+        use: 'file-loader?name=[name].[ext]&publicPath=../fonts/&outputPath=fonts/'
       },
       {
         test: /\.(jpg|png)$/,
-        use: "file-loader?name=[name].[ext]&publicPath=../img/&outputPath=img/"
+        use: 'file-loader?name=[name].[ext]&publicPath=../img/&outputPath=img/'
       }
     ]
   },
   resolve: {
-    modules: [path.resolve(__dirname), "node_modules"]
+    modules: [path.resolve(__dirname), 'node_modules']
   },
   plugins: [
     new webpack.ProvidePlugin({
-      jQuery: "jquery"
+      jQuery: 'jquery'
     }),
     new ExtractTextPlugin('css/style.css')
   ]

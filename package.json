@@ -12,6 +12,7 @@
     "gulp-rename": "^1.2.2",
     "node-sass": "^4.5.0",
     "sass-loader": "^6.0.3",
+    "semistandard": "^10.0.0",
     "style-loader": "^0.13.2",
     "url-loader": "^0.5.8",
     "webpack": "^2.2.1"
