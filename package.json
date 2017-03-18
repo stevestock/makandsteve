@@ -13,7 +13,7 @@
     "node-sass": "^4.5.0",
     "sass-loader": "^6.0.3",
     "semistandard": "^10.0.0",
-    "style-loader": "^0.13.2",
+    "style-loader": "^0.14.1",
     "url-loader": "^0.5.8",
     "webpack": "^2.2.1"
   },
