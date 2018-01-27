@@ -26,11 +26,11 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg)$/,
-        use: 'file-loader?name=[name].[ext]&publicPath=../fonts/&outputPath=fonts/'
+        use: 'file-loader?name=[name].[ext]&publicPath=../&outputPath=fonts/'
       },
       {
         test: /\.(jpg|png)$/,
-        use: 'file-loader?name=[name].[ext]&publicPath=../img/&outputPath=img/'
+        use: 'file-loader?name=[name].[ext]&publicPath=../&outputPath=img/'
       }
     ]
   },
