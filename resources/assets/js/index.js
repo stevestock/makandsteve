@@ -1,18 +1,17 @@
 // import 'public/index.html';
-import 'outdated-browser/outdatedbrowser/outdatedbrowser.min.css';
+import 'outdatedbrowser/outdatedbrowser/outdatedbrowser.min.css';
 import 'leaflet/dist/leaflet.css';
 import '../sass/makandsteve.scss';
-
+import countdown from 'countdown';
+import retina from 'retinajs';
+import 'bootstrap-sass';
 import _ from 'lodash';
 import $ from 'jquery';
-import outdatedBrowser from 'outdated-browser';
+import outdatedBrowser from 'outdatedbrowser';
 import L from 'leaflet-providers';
 if (process.env.NODE_ENV !== 'production') {
   require('file-loader?name=[name].[ext]&outputPath=js/!leaflet/dist/leaflet-src.map');
 }
-import countdown from 'countdown';
-import retina from 'retinajs';
-import 'bootstrap-sass';
 
 $(document).ready(function () {
   // retinajs
@@ -79,5 +78,5 @@ $(document).ready(function () {
   });
 
   L.marker([39.8636752, -74.9888584], {icon: heartIcon}).addTo(map)
-  .bindPopup('<strong>Woodcrest Country Club</strong><br>300 E Evesham Rd<br>Cherry Hill, NJ 08003');
+    .bindPopup('<strong>Woodcrest Country Club</strong><br>300 E Evesham Rd<br>Cherry Hill, NJ 08003');
 });

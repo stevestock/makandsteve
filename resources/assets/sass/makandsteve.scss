@@ -1,6 +1,6 @@
 @import "resources/assets/sass/variables.scss";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
-@import "node_modules/retinajs/src/_retina.scss";
+@import "node_modules/retinajs/dist/_retina.scss";
 
 @mixin aspect-ratio($width, $height) {
   position: relative;

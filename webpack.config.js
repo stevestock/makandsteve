@@ -21,7 +21,7 @@ module.exports = {
         })
       },
       {
-        test: require.resolve('outdated-browser'),
+        test: require.resolve('outdatedbrowser'),
         use: 'exports-loader?outdatedBrowser'
       },
       {
