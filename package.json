@@ -3,19 +3,20 @@
   "devDependencies": {
     "css-loader": "^0.28.9",
     "del": "^3.0.0",
-    "exports-loader": "^0.6.4",
-    "extract-text-webpack-plugin": "^3.0.2",
+    "exports-loader": "^0.7.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.6",
     "gulp": "^3.9.1",
     "gulp-image-resize": "^0.13.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-rename": "^1.2.2",
     "node-sass": "^4.5.0",
-    "sass-loader": "^6.0.3",
+    "sass-loader": "^7.0.1",
     "semistandard": "^12.0.0",
-    "style-loader": "^0.20.1",
-    "url-loader": "^0.6.2",
-    "webpack": "^3.10.0"
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
